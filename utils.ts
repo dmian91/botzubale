@@ -370,7 +370,7 @@ async function Registrotareas(taskId: string, status: string) {
   const logEntry = `${timestamp} - ID: ${taskId} - Estado: ${status}\n`;
 
   try {
-    await fs.appendFile("revisiones.log", logEntry);
+    await fs.appendFile("revisiones_out.log", logEntry);
   } catch (error) {
     console.error("Error al escribir en el archivo de log:", error);
   }
